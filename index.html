@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحقق من الوثائق</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Arabic+Kufi:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --main-color: #4183d7;
+            --main-text-color: #091c14;
+        }
+        body {
+            font-family: 'Droid Arabic Kufi', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: var(--main-text-color);
+        }
+        .sp-header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-2030 {
+            height: 50px;
+        }
+        .sp-logo {
+            height: 60px;
+        }
+        .dashboard-content {
+            padding: 50px 0;
+        }
+        .sp-main-box {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .sp-main-title {
+            background: #fff;
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sp-main-title h2 {
+            margin: 0;
+            font-size: 20px;
+            color: var(--main-color);
+            border-right: 4px solid var(--main-color);
+            padding-right: 15px;
+        }
+        .sp-main-button {
+            background: var(--main-color);
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .sp-main-button:hover {
+            background: #3572b8;
+        }
+        .sp-main-form {
+            padding: 25px 30px;
+        }
+        .sp-main-size {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .v-certificate-box {
+            padding: 0 30px 30px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .col-md-6 {
+            width: 50%;
+            padding: 10px 15px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        span.ng-binding {
+            display: block;
+            font-size: 15px;
+            color: #555;
+        }
+        .notExpired {
+            color: lightseagreen !important;
+            font-weight: bold;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .m-top-md {
+            margin-top: 30px;
+        }
+        .custom-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-3 {
+            background: var(--main-color);
+            color: #fff;
+        }
+        .check-again-btn {
+            background: #fff;
+            color: var(--main-color);
+            border: 1px solid var(--main-color);
+        }
+        .sp-footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+        .footer-boxes .row {
+            justify-content: space-between;
+        }
+        .footer-box h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+        .footer-box a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .social-media {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .social-media li {
+            margin-left: 15px;
+        }
+        .social-media i {
+            font-size: 20px;
+            color: #fff;
+        }
+        .footer-copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 30px;
+            font-size: 13px;
+            color: #bdc3c7;
+        }
+        @media (max-width: 768px) {
+            .col-md-6 {
+                width: 100%;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .sp-logo, .logo-2030 {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="sp-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="sp-outer-logo">
+                <img class="sp-logo" src="https://eservices.mcci.org.sa/Logos/identity/203.svg" alt="logo">
+            </div>
+            <div class="sp-outer-logos">
+                <img src="https://eservices.mcci.org.sa/Content/Theme/assets/img/2030.svg" alt="Vision 2030" class="logo-2030">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dashboard-content">
+    <div class="container">
+        <div class="sp-main-box">
+            <div class="sp-main-title">
+                <h2>التحقق من الوثائق</h2>
+                <a class="sp-main-button" href="#">العودة</a>
+            </div>
+            
+            <div class="sp-main-form">
+                <p class="sp-main-size">
+                    خدمة تتيح التحقق من الوثائق التي تم تصديقها إلكترونيا عبر بوابة خدمات المشتركين.
+                    وللتحقق من شهادة الاشتراك الرجاء ادخال الرقم المرجعى الخاص بالوثيقة.
+                </p>
+                
+                <div class="v-certificate">
+                    <div class="v-certificate-box">
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>إسم الغرفة</label>
+                                <span class="ng-binding">غرفة المدينة المنورة</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>إسم المنشأة</label>
+                                <span class="ng-binding"> مؤسسة نحن الابداع للمقاولات عامتہ
+</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>الرقم الموحد (700)</label>
+                                <span class="ng-binding">4701103639</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>رقم الطلب</label>
+                                <span class="ng-binding">12931900</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>نوع الطلب</label>
+                                <span class="ng-binding">طلب مفتوح ملف</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>إسم مقدم الطلب</label>
+                                <span class="ng-binding">بشری سعید بن سویعد الجھنی</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>تاريخ ووقت إنشاء الطلب</label>
+                                <span class="ng-binding">04/05/2026 - 12:10ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>مبلغ الطلب</label>
+                                <span class="ng-binding">35 ريال</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>تاريخ صلاحية الطلب</label>
+                                <span class="ng-binding">04/05/2027 - 7:40ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>رقم السجل التجاري</label>
+                                <span class="ng-binding">4701103639</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>حالة الطلب</label>
+                                <span class="ng-binding notExpired">تم قبول الطلب وساري</span>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center m-top-md">
+                            <button class="custom-btn btn-3">تحميل</button>
+                            <a class="custom-btn check-again-btn" href="#">التحقق مرة أخري</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="sp-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-box">
+                    <h3>تطوير وتشغيل</h3>
+                    <a href="https://worldofss.com/">
+                        <img src="https://eservices.mcci.org.sa/Content/Theme/img/worldofss-logo.svg" alt="World of Systems" style="width: 150px;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-box">
+                    <h3>للإستفسار والدعم الفني</h3>
+                    <a href="tel:00966112641362">00966112641362</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-box">
+                    <h3>تابعنا على</h3>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <p style="font-size: 12px; margin-top: 20px; color: #bdc3c7;">يفضل استخدام متصفح جوجل كروم</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>جميع الحقوق محفوظة غرفة المدينة المنورة © 2026</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
